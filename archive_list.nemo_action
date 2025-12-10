@@ -1,0 +1,11 @@
+[Nemo Action]
+Name=List archive
+Name[ru]=Список архива
+Comment=List files in archives
+Comment[ru]=Показать список файлов в архивах
+Icon-Name=system-help
+Extensions=7z;rar;zip;gz;tar;
+Selection=Files
+Quote=single
+Terminal=true
+Exec=/bin/bash -c "7zz l -bb3 %F; read " 

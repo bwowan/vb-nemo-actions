@@ -1,0 +1,11 @@
+[Nemo Action]
+Name=Extract AAC
+Name[ru]=Извлечь AAC
+Comment=Extract AAC audio channel by copying (very fast)
+Comment[ru]=Извлечь аудиоканал AAC копированием (очень быстро)
+Icon-Name=musique
+Extensions=mp4;
+Selection=Any
+Quote=double
+Terminal=true
+Exec=<scripts/extract_aac.sh %F>

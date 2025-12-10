@@ -1,0 +1,11 @@
+[Nemo Action]
+Name=Extract archive
+Name[ru]=Распаковать архив
+Comment=Extract 7Z, RAR, ZIP, GZ, TAR archives
+Comment[ru]=Распаковать архивы 7Z, RAR, ZIP, GZ, TAR
+Icon-Name=extract-archive
+Extensions=7z;rar;zip;gz;tar;
+Selection=Files
+Quote=double
+Terminal=true
+Exec=<scripts/archive_extract.sh %F>

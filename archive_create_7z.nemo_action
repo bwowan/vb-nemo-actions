@@ -1,0 +1,11 @@
+[Nemo Action]
+Name=Create 7Z
+Name[ru]=Создать 7Z
+Comment=Create 7Z archive with maximum compression
+Comment[ru]=Создать архив 7Z с максимальным сжатием
+Icon-Name=archive-manager
+Extensions=any;
+Selection=Any
+Quote=double
+Terminal=true
+Exec=<scripts/archive_create_7z.sh %F>

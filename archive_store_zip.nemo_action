@@ -1,0 +1,11 @@
+[Nemo Action]
+Name=Store to ZIP
+Name[ru]=Сохранить в ZIP
+Comment=Store files into archive without compression
+Comment[ru]=Сохранить файлы в архив без сжатия
+Icon-Name=archive-manager
+Extensions=any;
+Selection=Any
+Quote=double
+Terminal=true
+Exec=<scripts/archive_store_zip.sh %F>
