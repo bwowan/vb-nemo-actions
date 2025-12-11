@@ -8,4 +8,4 @@ Extensions=mp4;mp3;opus;ogg;flac;ape;wav;m4a;mkv;avi;webm;
 Selection=Any
 Quote=double
 Terminal=true
-Exec=<scripts/extract_opus.sh %F>
+Exec=<scripts/convert_to_opus.sh %F>

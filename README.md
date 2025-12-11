@@ -59,15 +59,23 @@ git clone https://github.com/bwowan/vb-nemo-actions.git
 ```
 .
 ├── README.md                    # This file
-├── *.nemo_action               # Action configuration files
+├── archive_create_7z.nemo_action
+├── archive_extract.nemo_action
+├── archive_extract_7z.nemo_action
+├── archive_list.nemo_action
+├── archive_store_zip.nemo_action
+├── convert_to_aac.nemo_action
+├── convert_to_opus.nemo_action
+├── extract_aac.nemo_action
+├── gen_playlist.nemo_action
 └── scripts/                    # Scripts executed by actions
     ├── archive_create_7z.sh     # Create 7Z archive
     ├── archive_extract.sh       # Extract archives
     ├── archive_store_zip.sh     # Create ZIP archive
     ├── convert_to_aac.sh        # Convert to AAC
+    ├── convert_to_opus.sh       # Extract to OPUS
     ├── extract_aac.sh           # Extract AAC
-    ├── extract_opus.sh          # Extract to OPUS
-    ├── gen_pl.sh                # Generate playlist
+    ├── gen_playlist.sh          # Generate playlist from music file in folder
     ├── notify_out.sh            # Notifications for completed operations
     └── zenity_select.sh         # Utility for selecting from list via zenity
 ```

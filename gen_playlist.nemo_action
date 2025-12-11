@@ -1,0 +1,12 @@
+[Nemo Action]
+Name=Generate Playlist
+Name[ru]=Создать плейлист
+Comment=Create M3U Playlist for all music files in the folder 
+Comment[ru]=Создать M3U плейлист для всех музыкальных файлов в папке
+Icon-Name=musique
+Extensions=Any;
+Selection=notnone
+Quote=double
+Terminal=true
+Mimetypes=inode/directory
+Exec=<scripts/gen_pl.sh %F>

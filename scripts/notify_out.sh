@@ -7,6 +7,6 @@ else
   param="-u critical -t 50000 \"FAIL:\""
 fi
 
-notify-send --app-name=nemo --icon=extract-archive --wait $param  "$2"
+notify-send --app-name=nemo --icon=extract-archive $param  "$2"
 
 
