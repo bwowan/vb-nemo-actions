@@ -8,9 +8,35 @@ This repository contains a set of scripts and configuration files to extend the 
 
 ## Installation
 
-### Option 1: Using the built-in installer (recommended)
+### Option 1: Using the Debian package (recommended)
 
-Use the installer script that will be added to this repository in the future. This is the easiest installation method.
+Build and install the Debian package using the provided installation script:
+
+1. Clone the repository:
+```bash
+git clone https://github.com/bwowan/vb-nemo-actions.git
+cd vb-nemo-actions
+```
+
+2. Run the installation script to build the DEB package:
+```bash
+chmod +x make_deb.sh
+./make_deb.sh
+```
+
+This will create `some-nemo-extensions.deb` in the current directory.
+
+3. Install the package:
+```bash
+sudo dpkg -i some-nemo-extensions.deb
+```
+
+If there are dependency issues, fix them with:
+```bash
+sudo apt-get install -f
+```
+
+4. Restart Nemo to apply changes.
 
 ### Option 2: Manual installation
 
@@ -34,6 +60,38 @@ git clone https://github.com/bwowan/vb-nemo-actions.git
    ```
 
 3. Restart Nemo to apply changes.
+
+## Building the Debian Package
+
+The `make_deb.sh` script automates the creation of a Debian package. Here's what it does:
+
+1. Creates a temporary `install` directory structure
+2. Copies all `.nemo_action` files and the `scripts/` directory to `usr/share/nemo/actions/`
+3. Creates the `DEBIAN` folder with `control` and `postinst` files
+4. Builds the `.deb` package using `dpkg-deb`
+5. Cleans up temporary files, leaving only the `.deb` file
+
+### Using make_deb.sh
+
+**Prerequisites:**
+- `dpkg-deb` must be installed (usually included with `dpkg-dev` package)
+- Bash shell
+
+**Usage:**
+```bash
+./make_deb.sh
+```
+
+The script will:
+- Create `some-nemo-extensions.deb` in the current directory
+- Automatically set executable permissions on all scripts
+- Remove the temporary `install` directory after building
+
+**Customization:**
+You can edit `make_deb.sh` to modify:
+- Package name and version (in the `control` file template)
+- Installation message (in the `postinst` file template)
+- Package structure and included files
 
 ## Available Actions
 
@@ -59,6 +117,7 @@ git clone https://github.com/bwowan/vb-nemo-actions.git
 ```
 .
 ├── README.md                    # This file
+├── make_deb.sh                  # Script to build Debian package
 ├── archive_create_7z.nemo_action
 ├── archive_extract.nemo_action
 ├── archive_extract_7z.nemo_action
