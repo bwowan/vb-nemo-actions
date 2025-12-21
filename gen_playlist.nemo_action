@@ -9,4 +9,4 @@ Selection=notnone
 Quote=double
 Terminal=true
 Mimetypes=inode/directory
-Exec=<scripts/gen_pl.sh %F>
+Exec=<scripts/gen_playlist.sh %F>

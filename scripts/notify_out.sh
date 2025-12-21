@@ -8,5 +8,3 @@ else
 fi
 
 notify-send --app-name=nemo --icon=extract-archive $param  "$2"
-
-
