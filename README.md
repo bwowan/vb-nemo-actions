@@ -2,6 +2,8 @@
 
 A collection of custom actions for the Nemo file manager in Linux.
 
+![Nemo Actions](scr01.png)
+
 ## Description
 
 This repository contains a set of scripts and configuration files to extend the functionality of the Nemo file manager. Actions include archive operations, audio conversion, and other useful features.
