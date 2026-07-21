@@ -1,10 +1,10 @@
 [Nemo Action]
-Name=Extract to OPUS
-Name[ru]=Извлечь в OPUS
+Name=Convert to OPUS
+Name[ru]=Конвертировать в OPUS
 Comment=Extract audio and save to OPUS file format
 Comment[ru]=Извлечь аудио и сохранить в формат OPUS
 Icon-Name=musique
-Extensions=mp4;mp3;opus;ogg;flac;ape;wav;m4a;mkv;avi;webm;
+Extensions=mp4;mp3;ogg;flac;ape;wav;m4a;mkv;avi;webm;aac;
 Selection=Any
 Quote=double
 Terminal=true

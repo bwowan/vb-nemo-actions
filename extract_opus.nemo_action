@@ -1,0 +1,11 @@
+[Nemo Action]
+Name=Extract OPUS
+Name[ru]=Извлечь OPUS
+Comment=Extract OPUS audio channel by copying (very fast)
+Comment[ru]=Извлечь аудиоканал OPUS копированием (очень быстро)
+Icon-Name=musique
+Extensions=mp4;mkv;avi;webm;
+Selection=Any
+Quote=double
+Terminal=true
+Exec=<scripts/extract_opus.sh %F>

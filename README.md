@@ -105,8 +105,9 @@ You can edit `make_deb.sh` to modify:
 ### Audio
 
 - **Convert --> AAC** / **Конвертировать --> AAC** - Convert audio to AAC file format
-- **Extract to OPUS** / **Извлечь в OPUS** - Extract audio and save to OPUS file format
+- **Convert to OPUS** / **Конвертировать в OPUS** - Convert audio and save to OPUS file format
 - **Extract AAC** / **Извлечь AAC** - Extract AAC audio channel by copying (very fast)
+- **Extract OPUS** / **Извлечь OPUS** - Extract OPUS audio channel by copying (very fast)
 
 ### Other
 
@@ -126,14 +127,16 @@ You can edit `make_deb.sh` to modify:
 ├── convert_to_aac.nemo_action
 ├── convert_to_opus.nemo_action
 ├── extract_aac.nemo_action
+├── extract_opus.nemo_action
 ├── gen_playlist.nemo_action
-└── scripts/                    # Scripts executed by actions
+└── scripts/                     # Scripts executed by actions
     ├── archive_create_7z.sh     # Create 7Z archive
     ├── archive_extract.sh       # Extract archives
     ├── archive_store_zip.sh     # Create ZIP archive
     ├── convert_to_aac.sh        # Convert to AAC
-    ├── convert_to_opus.sh       # Extract to OPUS
+    ├── convert_to_opus.sh       # Convert to OPUS
     ├── extract_aac.sh           # Extract AAC
+    ├── extract_opus.sh          # Extract OPUS
     ├── gen_playlist.sh          # Generate playlist from music file in folder
     ├── notify_out.sh            # Notifications for completed operations
     └── zenity_select.sh         # Utility for selecting from list via zenity
