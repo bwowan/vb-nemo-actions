@@ -123,7 +123,6 @@ You can edit `make_deb.sh` to modify:
 ├── make_deb.sh                  # Script to build Debian package
 ├── archive_create_7z.nemo_action
 ├── archive_extract.nemo_action
-├── archive_extract_7z.nemo_action
 ├── archive_list.nemo_action
 ├── archive_store_zip.nemo_action
 ├── convert_to_aac.nemo_action

@@ -18,9 +18,13 @@ zenity_options=()
 for i in "${!options[@]}"; do
     zenity_options+=("$((i+1))" "${options[i]}")
 done
-choice=$(zenity --list --title=strTitle --text=strText --column=strColumn "${zenity_options[@]}" \
-                --width=400 --height=300 --modal)
+choice=$(zenity --list --title="$strTitle" --text="$strText" --column="Number" --column="$strColumn" \
+                "${zenity_options[@]}" --width=400 --height=300 --modal)
 if [ -z "$choice" ]; then
+    exit 1
+fi
+
+if ! [[ "$choice" =~ ^[0-9]+$ ]] || [ "$choice" -lt 1 ] || [ "$choice" -gt "${#options[@]}" ]; then
     exit 1
 fi
 

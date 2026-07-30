@@ -1,10 +1,19 @@
 #!/bin/bash
 
-if [ $1 -eq 0 ]
-then 
-  param="-u normal -t 6000 \"OK:\""
-else
-  param="-u critical -t 50000 \"FAIL:\""
+if [ $# -lt 1 ]; then
+  echo "Usage: $0 <exit-code> [message]" >&2
+  exit 2
 fi
 
-notify-send --app-name=nemo --icon=extract-archive $param  "$2"
+if [ "$1" -eq 0 ]; then
+  urgency="normal"
+  timeout="6000"
+  summary="OK:"
+else
+  urgency="critical"
+  timeout="50000"
+  summary="FAIL:"
+fi
+
+notify-send --app-name=nemo --icon=extract-archive \
+  -u "$urgency" -t "$timeout" "$summary" "${2:-}"

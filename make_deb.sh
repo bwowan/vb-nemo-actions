@@ -44,15 +44,19 @@ EOF
 chmod +x "$INSTALL_DIR/DEBIAN/postinst"
 
 # 6. Create control file inside DEBIAN
-cat > "$INSTALL_DIR/DEBIAN/control" << 'EOF'
-Package: some-nemo-extensions
+cat > "$INSTALL_DIR/DEBIAN/control" << EOF
+Package: ${PACKAGE_NAME}
 Version: 1.0
 Section: utils
 Priority: optional
 Architecture: all
 Maintainer: vladimir.balabanov@gmail.com
-Description: Some extensions for Nemo (archiver, audio)
- This package contains extensions for the Nemo file manager for working with archives and extracting audio tracks from video files.
+Depends: nemo, ffmpeg, zenity, libnotify-bin, p7zip-full | 7zip
+Homepage: https://github.com/bwowan/vb-nemo-actions
+Description: Nemo actions for archive and audio workflows
+ This package contains extensions for the Nemo file manager for working with
+ archives, converting audio files, extracting audio tracks from video files,
+ and generating playlists.
 EOF
 
 # 7. Build debian package from install folder
