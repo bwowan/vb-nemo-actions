@@ -8,6 +8,7 @@ set -e  # Exit on error
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 INSTALL_DIR="$SCRIPT_DIR/install"
 PACKAGE_NAME="some-nemo-extensions"
+PACKAGE_PATH="$SCRIPT_DIR/../${PACKAGE_NAME}.deb"
 
 # Clean up any previous build
 if [ -d "$INSTALL_DIR" ]; then
@@ -51,7 +52,7 @@ Section: utils
 Priority: optional
 Architecture: all
 Maintainer: vladimir.balabanov@gmail.com
-Depends: nemo, ffmpeg, zenity, libnotify-bin, p7zip-full | 7zip
+Depends: nemo, zenity, libnotify-bin, p7zip-full | 7zip
 Homepage: https://github.com/bwowan/vb-nemo-actions
 Description: Nemo actions for archive and audio workflows
  This package contains extensions for the Nemo file manager for working with
@@ -61,9 +62,9 @@ EOF
 
 # 7. Build debian package from install folder
 cd "$SCRIPT_DIR"
-dpkg-deb --build "$INSTALL_DIR" "${PACKAGE_NAME}.deb"
+dpkg-deb --build "$INSTALL_DIR" "$PACKAGE_PATH"
 
 # 8. Remove all except DEB file
 rm -rf "$INSTALL_DIR"
 
-echo "Package built successfully: ${PACKAGE_NAME}.deb"
+echo "Package built successfully: $PACKAGE_PATH"
