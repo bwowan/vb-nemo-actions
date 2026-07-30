@@ -13,7 +13,7 @@ for inputDir in "$@"; do
         continue
     fi
 
-    pushd "$inputDir" > /dev/null
+    pushd "$inputDir" > /dev/null || exit
     plFile="./playlist.m3u"
 
     # Create playlist header
@@ -36,7 +36,6 @@ for inputDir in "$@"; do
         "$script_dir/notify_out.sh" 0 "$inputDir/playlist.m3u"
     fi
 
-    popd > /dev/null
+    popd > /dev/null || exit
 done
-
 
