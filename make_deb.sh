@@ -47,7 +47,7 @@ chmod +x "$INSTALL_DIR/DEBIAN/postinst"
 # 6. Create control file inside DEBIAN
 cat > "$INSTALL_DIR/DEBIAN/control" << EOF
 Package: ${PACKAGE_NAME}
-Version: 1.0
+Version: 1.5
 Section: utils
 Priority: optional
 Architecture: all
